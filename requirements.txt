@@ -8,6 +8,8 @@ Flask
 pymongo
 certifi
 pymongo[srv]==3.13
+dill
+pyaml
 
 
 ## -e .
