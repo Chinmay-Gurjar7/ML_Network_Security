@@ -44,6 +44,7 @@ DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = 'transformed_object'
 # DATA_TRANSFORMATION_OBJECT_FILE_NAME: str = 'transformed_object.pkl'
 DATA_TRANSFORMED_IMPUTER_PARAMS: dict = {
     'missing_values': np.nan,
-    'n_neighbour': 3,
+    'n_neighbors': 3,
     'weights': 'uniform',
 }
+DATA_TRANSFORMATION_OBJECT_FILE_NAME: str = "preprocessing.pkl"

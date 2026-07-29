@@ -1,0 +1,14 @@
+[2026-07-29 19:41:29,552] 14 root - INFO - Starting data ingestion process...
+[2026-07-29 19:41:59,960] 57 root - INFO - Feature store file saved at: Artifacts\07_29_2026__19_41_27\data_ingestion\feature_store\feature_store.csv
+[2026-07-29 19:41:59,966] 67 root - INFO - Perform train test split on the data frame
+[2026-07-29 19:41:59,966] 68 root - INFO - Exited from split_data_as_train_test method of Data Ingestion class
+[2026-07-29 19:41:59,975] 72 root - INFO - Exporting training dataset to file: [Artifacts\07_29_2026__19_41_27\data_ingestion\ingested\train.csv]
+[2026-07-29 19:42:00,030] 76 root - INFO - Exporting test dataset to file: [Artifacts\07_29_2026__19_41_27\data_ingestion\ingested\test.csv]
+[2026-07-29 19:42:00,045] 80 root - INFO - Exported train and test file path
+[2026-07-29 19:42:00,054] 21 root - INFO - Starting data validation process...
+[2026-07-29 19:42:00,210] 31 root - INFO - Expected number of columns: 31, Found: 31
+[2026-07-29 19:42:00,210] 31 root - INFO - Expected number of columns: 31, Found: 31
+[2026-07-29 19:42:00,423] 28 root - INFO - Starting data transformation process...
+[2026-07-29 19:42:00,423] 47 root - INFO - Starting data transformation process
+[2026-07-29 19:42:00,525] 33 root - INFO - Entered get_data_transformer_object method of Data_Transformation class
+[2026-07-29 19:42:00,525] 38 root - INFO - Exited get_data_transformer_object method of Data_Transformation class
