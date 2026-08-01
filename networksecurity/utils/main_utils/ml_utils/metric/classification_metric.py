@@ -1,8 +1,9 @@
 from networksecurity.entity.artifact_entity import ClasssificationMetricArtifact
-from networksecurity.exceprion.exception import NetworkSecurityException
+from networksecurity.exception.exception import NetworkSecurityException
 from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
+import os, sys
 
-def get_classification_score(y_true, y_pred, metric_name:str)->ClasssificationMetricArtifact:
+def get_classification_score(y_true, y_pred):
     try:
         model_f1_score = f1_score(y_true, y_pred)
         model_recall_score = accuracy_score(y_true, y_pred)
