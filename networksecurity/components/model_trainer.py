@@ -1,6 +1,8 @@
 import os, sys
 import logging
 import mlflow
+import dagshub
+dagshub.init(repo_owner='Chinmay-Gurjar7', repo_name='ML_Network_Security', mlflow=True)
 from urllib.parse import urlparse
 from networksecurity.components.data_transformation import DataTransformation
 from networksecurity.exception.exception import NetworkSecurityException

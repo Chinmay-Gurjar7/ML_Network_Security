@@ -12,24 +12,28 @@ from networksecurity.entity.artifact_entity import DataTransformationArtifact, D
 from networksecurity.logging import logger
 from networksecurity.exception.exception import NetworkSecurityException
 from networksecurity.utils.main_utils.utils import save_object, save_numpy_array_data
+from networksecurity.entity.config_entity import DataTransformationConfig
 
 class DataTransformation:
-    def __init__(self, data_validation_artifact:DataValidationArtifact,
-                       data_transformation_artifact:DataTransformationArtifact):
+    def __init__(
+        self,
+        data_transformation_config: DataTransformationConfig,
+        data_validation_artifact: DataValidationArtifact
+    ):
         try:
-            self.data_validation_artifact: DataValidationArtifact = data_validation_artifact
-            # self.data_transformation_config: DataTransformationConfig = data_transformation_config
-            self.data_transformation_artifact: DataTransformationArtifact = data_transformation_artifact
+            self.data_transformation_config = data_transformation_config
+            self.data_validation_artifact = data_validation_artifact
         except Exception as e:
-            raise NetworkSecurityException(e, sys)
-
+            raise NetworkSecurityException(e, sys) from e
+        
+    @staticmethod
     def read_data(file_path) -> pd.DataFrame:
         try:
             return pd.read_csv(file_path)
         except Exception as e:
             raise NetworkSecurityException(e, sys)
         
-    def get_data_transformer_object(cls):
+    def get_data_transformer_object(self):
         logging.info('Entered get_data_transformer_object method of Data_Transformation class')
         try:
             imputer = KNNImputer(
@@ -68,15 +72,28 @@ class DataTransformation:
             test_arr = np.c_[transform_input_feature_test_arr, np.array(target_feature_test_df)]
             
             # Save numpy array data
-            save_numpy_array_data(file_path=self.data_transformation_artifact.transformed_train_file_path, array=train_arr)
-            save_numpy_array_data(file_path=self.data_transformation_artifact.transformed_test_file_path, array=test_arr)
-            save_object(file_path=self.data_transformation_artifact.transformed_object_file_path, obj=preprocessor_object)
+            save_numpy_array_data(
+                file_path=self.data_transformation_config.transformed_train_file_path,
+                array=train_arr
+            )
+
+            save_numpy_array_data(
+                file_path=self.data_transformation_config.transformed_test_file_path,
+                array=test_arr
+            )
+
+            save_object(
+                file_path=self.data_transformation_config.transformed_object_file_path,
+                obj=preprocessor_object
+            )
+            
+            save_object("final_model/preprocessor.pkl", preprocessor_object)
             
             # Preparing artifact
             data_transformation_artifact = DataTransformationArtifact(
-            transformed_train_file_path=self.data_transformation_artifact.transformed_train_file_path,
-            transformed_test_file_path=self.data_transformation_artifact.transformed_test_file_path,
-            transformed_object_file_path=self.data_transformation_artifact.transformed_object_file_path
+            transformed_train_file_path=self.data_transformation_config.transformed_train_file_path,
+            transformed_test_file_path=self.data_transformation_config.transformed_test_file_path,
+            transformed_object_file_path=self.data_transformation_config.transformed_object_file_path
             )
             return data_transformation_artifact
             

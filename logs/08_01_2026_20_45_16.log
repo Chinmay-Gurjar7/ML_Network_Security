@@ -1,0 +1,19 @@
+[2026-08-01 20:45:21,362] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-08-01 20:45:21,369] 107 dagshub - INFO - Accessing as Chinmay-Gurjar7
+[2026-08-01 20:45:22,276] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Chinmay-Gurjar7/ML_Network_Security "HTTP/1.1 200 OK"
+[2026-08-01 20:45:23,189] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-08-01 20:45:23,190] 107 dagshub - INFO - Initialized MLflow to track repo "Chinmay-Gurjar7/ML_Network_Security"
+[2026-08-01 20:45:23,191] 107 dagshub - INFO - Repository Chinmay-Gurjar7/ML_Network_Security initialized!
+[2026-08-01 20:47:17,011] 34 root - INFO - Data Ingestion Config: <networksecurity.entity.config_entity.DataIngestionConfig object at 0x00000150AD38CC20>
+[2026-08-01 20:47:24,909] 57 root - INFO - Feature store file saved at: Artifacts\08_01_2026__20_45_17\data_ingestion\feature_store\feature_store.csv
+[2026-08-01 20:47:24,917] 67 root - INFO - Perform train test split on the data frame
+[2026-08-01 20:47:24,917] 68 root - INFO - Exited from split_data_as_train_test method of Data Ingestion class
+[2026-08-01 20:47:24,918] 72 root - INFO - Exporting training dataset to file: [Artifacts\08_01_2026__20_45_17\data_ingestion\ingested\train.csv]
+[2026-08-01 20:47:25,014] 76 root - INFO - Exporting test dataset to file: [Artifacts\08_01_2026__20_45_17\data_ingestion\ingested\test.csv]
+[2026-08-01 20:47:25,046] 80 root - INFO - Exported train and test file path
+[2026-08-01 20:47:25,047] 37 root - INFO - Data Ingestion Artifact: DataIngestionArtifact(train_file_path='Artifacts\\08_01_2026__20_45_17\\data_ingestion\\ingested\\train.csv', test_file_path='Artifacts\\08_01_2026__20_45_17\\data_ingestion\\ingested\\test.csv')
+[2026-08-01 20:47:25,048] 46 root - INFO - Data Validation Config: <networksecurity.entity.config_entity.DataValidationConfig object at 0x00000150AD38CD70>
+[2026-08-01 20:47:25,209] 31 root - INFO - Expected number of columns: 31, Found: 31
+[2026-08-01 20:47:25,209] 31 root - INFO - Expected number of columns: 31, Found: 31
+[2026-08-01 20:47:25,512] 49 root - INFO - Data Validation Artifact: DataValidationArtifact(valid_train_file_path='Artifacts\\08_01_2026__20_45_17\\data_ingestion\\ingested\\train.csv', valid_test_file_path='Artifacts\\08_01_2026__20_45_17\\data_ingestion\\ingested\\test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='Artifacts\\08_01_2026__20_45_17\\data_validation\\drift_report\\report.yaml')
+[2026-08-01 20:47:25,512] 58 root - INFO - Data Transformation Config: <networksecurity.entity.config_entity.DataTransformationConfig object at 0x00000150AD38CEC0>

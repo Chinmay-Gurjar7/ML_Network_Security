@@ -1,0 +1,23 @@
+[2026-08-01 19:18:11,530] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-08-01 19:18:11,537] 107 dagshub - INFO - Accessing as Chinmay-Gurjar7
+[2026-08-01 19:18:12,345] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Chinmay-Gurjar7/ML_Network_Security "HTTP/1.1 200 OK"
+[2026-08-01 19:18:13,187] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-08-01 19:18:13,189] 107 dagshub - INFO - Initialized MLflow to track repo "Chinmay-Gurjar7/ML_Network_Security"
+[2026-08-01 19:18:13,189] 107 dagshub - INFO - Repository Chinmay-Gurjar7/ML_Network_Security initialized!
+[2026-08-01 19:18:13,231] 15 root - INFO - Starting data ingestion process...
+[2026-08-01 19:18:18,373] 57 root - INFO - Feature store file saved at: Artifacts\08_01_2026__19_18_07\data_ingestion\feature_store\feature_store.csv
+[2026-08-01 19:18:18,376] 67 root - INFO - Perform train test split on the data frame
+[2026-08-01 19:18:18,376] 68 root - INFO - Exited from split_data_as_train_test method of Data Ingestion class
+[2026-08-01 19:18:18,376] 72 root - INFO - Exporting training dataset to file: [Artifacts\08_01_2026__19_18_07\data_ingestion\ingested\train.csv]
+[2026-08-01 19:18:18,407] 76 root - INFO - Exporting test dataset to file: [Artifacts\08_01_2026__19_18_07\data_ingestion\ingested\test.csv]
+[2026-08-01 19:18:18,416] 80 root - INFO - Exported train and test file path
+[2026-08-01 19:18:18,422] 22 root - INFO - Starting data validation process...
+[2026-08-01 19:18:18,490] 31 root - INFO - Expected number of columns: 31, Found: 31
+[2026-08-01 19:18:18,490] 31 root - INFO - Expected number of columns: 31, Found: 31
+[2026-08-01 19:18:18,597] 29 root - INFO - Starting data transformation process...
+[2026-08-01 19:18:18,597] 47 root - INFO - Starting data transformation process
+[2026-08-01 19:18:18,651] 33 root - INFO - Entered get_data_transformer_object method of Data_Transformation class
+[2026-08-01 19:18:18,652] 38 root - INFO - Exited get_data_transformer_object method of Data_Transformation class
+[2026-08-01 19:18:18,677] 33 root - INFO - Entered the save_object method of MainUtils class
+[2026-08-01 19:18:18,679] 37 root - INFO - Exited the save_object method of MainUtils class
+[2026-08-01 19:18:18,680] 34 root - INFO - Model Training sstared

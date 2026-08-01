@@ -1,0 +1,6 @@
+[2026-08-01 21:03:38,330] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-08-01 21:03:38,343] 107 dagshub - INFO - Accessing as Chinmay-Gurjar7
+[2026-08-01 21:03:39,107] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Chinmay-Gurjar7/ML_Network_Security "HTTP/1.1 200 OK"
+[2026-08-01 21:03:40,303] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-08-01 21:03:40,304] 107 dagshub - INFO - Initialized MLflow to track repo "Chinmay-Gurjar7/ML_Network_Security"
+[2026-08-01 21:03:40,305] 107 dagshub - INFO - Repository Chinmay-Gurjar7/ML_Network_Security initialized!
