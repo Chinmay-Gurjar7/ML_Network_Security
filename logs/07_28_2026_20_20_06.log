@@ -1,9 +1,0 @@
-[2026-07-28 20:20:08,716] 13 root - INFO - Starting data ingestion process...
-[2026-07-28 20:20:14,423] 57 root - INFO - Feature store file saved at: Artifacts\07_28_2026__20_20_07\data_ingestion\feature_store\feature_store.csv
-[2026-07-28 20:20:14,426] 67 root - INFO - Perform train test split on the data frame
-[2026-07-28 20:20:14,426] 68 root - INFO - Exited from split_data_as_train_test method of Data Ingestion class
-[2026-07-28 20:20:14,426] 72 root - INFO - Exporting training dataset to file: [Artifacts\07_28_2026__20_20_07\data_ingestion\ingested\train.csv]
-[2026-07-28 20:20:14,457] 76 root - INFO - Exporting test dataset to file: [Artifacts\07_28_2026__20_20_07\data_ingestion\ingested\test.csv]
-[2026-07-28 20:20:14,467] 80 root - INFO - Exported train and test file path
-[2026-07-28 20:20:14,474] 20 root - INFO - Starting data validation process...
-[2026-07-28 20:20:14,583] 31 root - INFO - Expected number of columns: 2, Found: 31
